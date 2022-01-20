@@ -1,0 +1,80 @@
+using System;
+
+namespace Taller_repaso
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int suma1;
+            int suma2;
+            int suma3;
+            string tipo;
+
+
+            int dato1, dato2, dato3;
+            Console.WriteLine("Ingrese el primer valor");
+            dato1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Ingrese el segundo valor");
+            dato2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Ingrese el tercer valor");
+            dato3 = int.Parse(Console.ReadLine());
+            suma1 = dato1 + dato2;
+            suma2 = dato2 + dato3;
+            suma3 = dato3 + dato1;
+
+          
+            if (suma1 > dato3 && suma2 > dato1 && suma3> dato2)
+            {
+                Console.WriteLine("Si, es triangulo");
+
+                Console.WriteLine("Ingrese el primer lado");
+                dato1 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Ingrese el segundo lado");
+                dato2 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Ingrese el tercer lado");
+                dato3 = int.Parse(Console.ReadLine());
+
+                if (dato1 == dato2 && dato1 == dato3 && dato2 == dato3)
+                {
+                    tipo = "Equilatero";
+                }
+                else
+                {
+                    if (dato1 == dato2 || dato1 == dato3 || dato2 == dato3)
+                    {
+                        tipo = "Isoceles";
+                    }
+                    else
+                    {
+                        tipo = "Escaleno";
+                    }
+                }
+                Console.WriteLine("El triangulo es:" + tipo);
+            }
+            
+
+            else
+            {
+                Console.WriteLine("No, no es triangulo");
+            }
+
+
+           
+
+
+
+        }
+    }
+}
+
+
+
+
+    
+
