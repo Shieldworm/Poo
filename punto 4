@@ -1,0 +1,47 @@
+using System;
+
+namespace punto_4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingrese un texto");
+            var texto = Console.ReadLine();
+
+           
+            var charContar = leerCaracter();
+
+
+            int contador1 = ContarChar(texto, charContar);
+            Console.WriteLine("El numero de veces que aparece el caracter es "+ contador1);
+            Console.WriteLine();
+        }
+
+
+
+        public static int ContarChar(string texto, char charContar)
+        {
+            int contador = 0;
+            var arrayChar = texto.ToCharArray();
+            foreach(char caracter in arrayChar)
+            {
+                if (caracter.Equals( charContar))
+                    contador++;
+            }
+            return contador;
+        }
+
+        public static char leerCaracter()
+        {
+            bool valido = false;
+            char caracter = ' ';
+            while (! valido)
+            {
+                Console.WriteLine("ingrese caracter");
+                valido = char.TryParse(Console.ReadLine(), out caracter);
+            }
+            return caracter;
+        }
+    }
+}
