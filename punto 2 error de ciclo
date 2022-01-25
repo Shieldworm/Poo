@@ -7,18 +7,19 @@ namespace Taller_repaso
 
         static void Main(string[] args)
         {
-            int x=1, y=0;
-            int resultado;
+            int x = 1, y = 0;
+            int resultado = 0;
             Console.WriteLine(1);
-            for (int i = 0; i <= 100; i++)
+            while (resultado <= 10000) 
             {
               
+
                 resultado = x + y;
                 Console.WriteLine(resultado);
                 y = x;
                 x = resultado;
             }
-            
+
         }
     }
 }
