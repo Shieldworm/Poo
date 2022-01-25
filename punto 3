@@ -1,0 +1,47 @@
+using System;
+
+namespace Taller_repaso
+{
+    class Program
+    {
+      
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("ingrese la palabra a revisar");
+            string palabra = Console.ReadLine().ToString().ToLower();
+            //string palabra2 = Console.ReadLine();
+
+            char[] letras = palabra.ToCharArray();          
+            string reversa = "";
+            for (int i = letras.Length -1; i >= 0; i--)
+                // letras.lenght es por que las posiciones empiezan desde 0 y la longitud no 
+            {
+                Console.WriteLine(letras[i]);
+                reversa += letras[i];
+                // el i-- hace que podamos leer la palabra desde atras y el reversa += letras i
+                // reversa += asigna y suma la lista con el numero(i) i es igual a la cantidad de numeros que hay, es el indice
+            }
+
+            if (reversa == palabra)
+            {
+                Console.WriteLine("Es palindroma");
+            }
+
+            else
+            {
+                Console.WriteLine("no es palindroma");
+            }
+            // el += asigna y suma lo mismo a lo que hay al otro lado
+            // char es el metodo letra es el nombre de la variable e in letras es lo que vamos a revisar 
+           // foreach (char letra in letras)
+            //{
+              //  Console.WriteLine(letra);
+            //}
+
+            //()
+            //char es un caracter se utilizan los parente4sis cuadrados por que es una lista, se le da el nombre y se le aplica el .tochararray y lo convierte en una lista letra por letra 
+            //array es areglo
+        }
+    }
+}
